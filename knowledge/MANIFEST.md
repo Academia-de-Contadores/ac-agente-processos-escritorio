@@ -1,5 +1,11 @@
 # Manifesto do Knowledge original do GPT
 
+> **Estado ao vivo em 2026-08-22:** o editor oficial
+> `g-6a6ea5f0985c8191971aa805e5ad759f` exibiu zero anexos em
+> `Conhecimento`. Os quatro arquivos abaixo são uma cópia histórica verificada
+> do rascunho de 2026-08-07 e não devem ser descritos como anexos atualmente
+> ativos no GPT publicado.
+
 - **GPT:** `ac.processos-escritorio`
 - **Editor:** https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a
 - **Captura integral:** 2026-08-07
