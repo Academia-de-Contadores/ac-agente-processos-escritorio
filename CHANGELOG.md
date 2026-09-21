@@ -4,6 +4,14 @@ Todas as mudanças relevantes deste agente serão registradas aqui.
 
 ## Unreleased
 
+- Empacota `$ac-processos-escritorio` `0.2.0` como candidata independente,
+  ligada ao GPT canônico e reutilizada pelo alias publicado `copy`.
+- Declara allowlist distribuível, interface, políticas de fonte/aprovação,
+  proteção contra prompt injection e cinco formatos de saída revisável.
+- Usa sem duplicação exatamente os quatro anexos baixados em 2026-08-07 e
+  valida nome, tamanho e SHA-256.
+- Adiciona seis casos de paridade, rubrica 0–2 em seis dimensões, gates
+  obrigatórios, cenários de segurança/regressão e validador reproduzível.
 - Reconcilia o editor canônico em modo somente leitura em 2026-09-21.
 - Confirma paridade criptográfica das instruções, metadados, quatro starters,
   capacidades, ausência observável de Actions e nomes do Knowledge 4/4.

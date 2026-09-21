@@ -8,7 +8,10 @@ controlada dele.
 
 ```text
 .
+├── SKILL.md                   # entrypoint distribuível da família
 ├── agent.yaml
+├── agents/                    # metadados de interface da skill
+├── references/                # políticas e formatos lidos sob demanda
 ├── objectives/                 # missão, métricas e não-objetivos
 ├── identity/                   # papel, autoridade, voz e valores
 ├── instructions/               # prompt, guardrails e workflows permanentes
@@ -106,10 +109,13 @@ use-a somente com manifesto de tipo, alvo, finalidade e dependência.
 
 ## Skills
 
-- **O que é:** `skills/` reúne procedimentos reutilizáveis e acionáveis.
-- **Entra:** `skills/<nome>/SKILL.md` e `skills/<nome>/evaluations/`.
+- **O que é:** `SKILL.md` é o entrypoint distribuível desta família; `skills/`
+  fica reservado para procedimentos internos realmente separados.
+- **Entra:** `SKILL.md`, `agents/openai.yaml`, referências condicionais em
+  `references/` e, somente se houver outra capacidade, `skills/<nome>/SKILL.md`.
 - **Não entra:** regra de toda resposta, dado bruto ou credencial.
-- **Exemplo:** `skills/example-skill/SKILL.md` para estruturar briefing.
+- **Exemplo:** `SKILL.md` roteia para `references/process-outputs.md` ao
+  estruturar mapa, RACI, checklist ou plano de cinco dias.
 - **Avaliação ou revisão:** cada mudança requer cenário direcionado e regressão aplicável.
 
 ## Knowledge
