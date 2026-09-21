@@ -58,6 +58,11 @@ acessível, escolha uma destas duas saídas:
    `HIPÓTESE/EXEMPLO —` e ligue a dependência dessa mesma etapa à validação do
    artefato-fonte ausente.
 
+Nas duas saídas, registre no próprio artefato, de forma explícita,
+`Status de risco: [A VALIDAR]` e `SLA: [A VALIDAR]`. Não deixe esses campos
+somente na lista de informações a solicitar depois e não invente prazo para
+preenchê-los.
+
 Não complete uma sequência genérica a partir apenas do nome do processo. Um
 título, uma nota geral, `[A VALIDAR]` apenas nos papéis ou a promessa de que
 “as linhas marcadas são hipóteses” não substituem a marcação de cada etapa.

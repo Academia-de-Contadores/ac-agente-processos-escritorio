@@ -148,6 +148,19 @@ awk '
 ' "$fixture/agent.yaml.valid" > "$fixture/agent.yaml"
 expect_rejected "a distributable package containing a non-runtime file"
 mv "$fixture/agent.yaml.valid" "$fixture/agent.yaml"
+
+cp "$fixture/references/process-outputs.md" "$fixture/process-outputs.valid"
+perl -0pi -e 's/`Status de risco: \[A VALIDAR\]`/`Status de risco: indefinido`/' \
+  "$fixture/references/process-outputs.md"
+expect_rejected "an absent-source output contract without explicit risk status"
+mv "$fixture/process-outputs.valid" "$fixture/references/process-outputs.md"
+
+cp "$fixture/references/process-outputs.md" "$fixture/process-outputs.valid"
+perl -0pi -e 's/`SLA: \[A VALIDAR\]`/`SLA: indefinido`/' \
+  "$fixture/references/process-outputs.md"
+expect_rejected "an absent-source output contract without explicit SLA placeholder"
+mv "$fixture/process-outputs.valid" "$fixture/references/process-outputs.md"
+
 cp "$fixture/HOW-TO-USE.md" "$fixture/HOW-TO-USE.md.valid"
 rm "$fixture/HOW-TO-USE.md"
 expect_rejected "a repository without HOW-TO-USE.md"

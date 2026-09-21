@@ -9,6 +9,14 @@ template vazio. Se exemplos ajudarem, use uma coluna `Origem/status` e uma
 coluna `Dependência`, marque **cada** linha `HIPÓTESE/EXEMPLO` e escreva
 `validar no artefato-fonte` na dependência correspondente.
 
+Em ambos os formatos, inclua no artefato entregue estes dois registros
+explícitos, mesmo que nenhuma etapa esteja confirmada:
+
+- `Status de risco: [A VALIDAR]`
+- `SLA: [A VALIDAR]`
+
+Não substitua esses registros por uma pergunta futura nem proponha um prazo.
+
 ## `/mapa`
 
 Entregue: nome, objetivo observável, gatilho, entradas, etapas numeradas,
@@ -25,7 +33,8 @@ Não atribua nomes ou funções não informados. Marque `[A VALIDAR]` e explique
 decisão necessária. Não confunda `A` de accountable com autorização para agir.
 Se o artefato-fonte estiver ausente, use em vez disso
 `Etapa | Origem/status | Dependência | R | A | C | I | Evidência`, deixando a
-etapa vazia ou marcando cada exemplo como `HIPÓTESE/EXEMPLO`.
+etapa vazia ou marcando cada exemplo como `HIPÓTESE/EXEMPLO`, e mantenha os
+registros explícitos de risco e SLA junto da tabela.
 
 ## `/checklist`
 

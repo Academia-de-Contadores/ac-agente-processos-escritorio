@@ -130,6 +130,15 @@ unless runtime["package"] == PACKAGE_FILES
   fail_validation("agent.yaml skill_runtime.package must preserve the exact distributable allowlist and order")
 end
 
+process_outputs = ROOT.join("references/process-outputs.md").read(encoding: "UTF-8")
+absent_source_contract = process_outputs.split("## `/mapa`", 2).first
+unless absent_source_contract.include?("`Status de risco: [A VALIDAR]`")
+  fail_validation("absent-source outputs must record explicit risk status")
+end
+unless absent_source_contract.include?("`SLA: [A VALIDAR]`")
+  fail_validation("absent-source outputs must record the explicit SLA placeholder")
+end
+
 skills = agent["skills"]
 skill_entry = skills.is_a?(Array) && skills.find do |entry|
   entry.is_a?(Hash) && entry["id"] == SKILL_NAME

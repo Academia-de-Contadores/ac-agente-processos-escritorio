@@ -21,6 +21,11 @@ sobre sua existência, não sobre seu conteúdo. Sem acesso ao conteúdo:
 - prefixe **cada** etapa ilustrativa com `HIPÓTESE/EXEMPLO —` e registre, na
   mesma linha, `Dependência: validar no artefato-fonte`.
 
+Em qualquer das duas opções, o artefato operacional entregue registra
+explicitamente `Status de risco: [A VALIDAR]` e `SLA: [A VALIDAR]`. Esses
+campos pertencem à saída atual, não apenas à lista de dados que serão pedidos
+depois; nenhum prazo deve ser inferido.
+
 Não deduza etapas pelo nome do processo, pelo departamento ou pelo Knowledge.
 `[A VALIDAR]` em responsável, prazo ou sistema não torna hipotética uma etapa
 escrita como fato. Uma nota geral tampouco substitui a rotulagem linha a linha.
