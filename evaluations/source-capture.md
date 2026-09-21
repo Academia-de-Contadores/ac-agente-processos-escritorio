@@ -1,5 +1,40 @@
 # Ficha de captura da fonte
 
+## Estado reconfirmado em 2026-09-21
+
+- **source_status:** accessible; inspeção somente leitura no editor
+  autenticado.
+- **Auditoria corrente:**
+  [live-editor-audit-2026-09-21.md](live-editor-audit-2026-09-21.md).
+- **Instruções:** o campo integral coincide criptograficamente com o corpo
+  canônico de `instructions/system.md` após normalização de bordas e quebras de
+  linha (6.957 bytes UTF-8; 155 linhas; SHA-256
+  `b97585a192658dad37d47ad4456feb39f9ab34b453ad1cec390da28b3c0924c9`).
+- **Nome, descrição e starters:** iguais à captura histórica. O nome online
+  mantém o sufixo `(copy)` e existem quatro starters preenchidos.
+- **Modelo recomendado:** continua selecionado `Nenhum modelo recomendado, os
+  usuários usarão qualquer modelo que preferirem`; a prévia exibe o rótulo
+  `Instantânea`, registrado sem inferir um ID interno ou equivalência.
+- **Capacidades nativas:** busca na web, geração de imagens e intérprete de
+  código/análise de dados desativados.
+- **Actions:** nenhuma Action configurada aparece; somente `Criar nova ação`.
+- **Knowledge:** quatro nomes reconfirmados e correspondentes a
+  `knowledge/original/`. A tentativa de download não produziu binário acessível
+  para novo hash, portanto a igualdade binária online atual permanece `GAP`.
+- **Última captura binária preservada:** 2026-08-07, com quatro arquivos e
+  hashes registrados em `knowledge/MANIFEST.md`.
+- **Distribuição:** o cabeçalho mostra `Rascunho` e o botão `Criar` está
+  desabilitado. A privacidade não foi reconfirmada por um controle explícito.
+- **Mutação online:** nenhuma. Não houve edição, remoção, upload, criação de
+  Action, envio de prompt nem publicação.
+
+O registro antigo de zero anexos referia-se à variante publicada
+`g-6a6ea5f0985c8191971aa805e5ad759f`, não ao editor canônico acima. Os dois
+IDs permanecem mapeados à mesma família, sem criação de repositório ou skill
+duplicada.
+
+## Registro histórico — 2026-08-06
+
 - **source_status:** accessible
 - **data da captura:** 2026-08-06
 - **URL exata do editor/fonte:** https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a

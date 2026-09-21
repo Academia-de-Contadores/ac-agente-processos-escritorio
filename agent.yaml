@@ -11,8 +11,11 @@ catalog:
 source_capture:
   status: accessible
   captured_at: 2026-08-06
+  last_verified_at: 2026-09-21
+  knowledge_binary_captured_at: 2026-08-07
   source_url: https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a
   record: evaluations/source-capture.md
+  current_audit: evaluations/live-editor-audit-2026-09-21.md
 objectives:
   mission: objectives/mission.md
   metrics: objectives/success-metrics.md
@@ -27,6 +30,7 @@ skills: []
 connectors: []
 evaluations:
   - evaluations/source-capture.md
+  - evaluations/live-editor-audit-2026-09-21.md
   - evaluations/scenarios/T1.md
   - evaluations/scenarios/T2.md
   - evaluations/scenarios/T3.md
