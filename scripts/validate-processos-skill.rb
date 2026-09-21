@@ -113,8 +113,8 @@ if description.include?("<") || description.include?(">") || description.include
 end
 
 agent = load_yaml("agent.yaml")
-unless agent.dig("agent", "version") == "0.2.0" && agent.dig("agent", "lifecycle") == "candidate"
-  fail_validation("agent.yaml must declare version 0.2.0 with lifecycle candidate")
+unless agent.dig("agent", "version") == "0.2.0" && agent.dig("agent", "lifecycle") == "validated"
+  fail_validation("agent.yaml must declare version 0.2.0 with lifecycle validated")
 end
 fail_validation("agent.yaml connectors must remain empty") unless agent["connectors"] == []
 

@@ -7,7 +7,7 @@
 | GPT canônico | [`g-6a725900102c8191bdcb028b9ab4f21a`](https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a) |
 | Alias publicado | `g-6a6ea5f0985c8191971aa805e5ad759f` (`copy`) |
 | Versão | `0.2.0` |
-| Lifecycle | `candidate` |
+| Lifecycle | `validated` |
 
 ## Propósito
 
@@ -16,7 +16,7 @@ visível, testável e revisável. A skill pode produzir mapa em uma página, RAC
 checklist, plano de cinco dias e roteiro de teste, sempre separando fatos,
 lacunas, hipóteses e decisões humanas.
 
-O GPT online é a baseline comportamental preservada. A skill candidata é mais
+O GPT online é a baseline comportamental preservada. A skill validada é mais
 acionável: entrega uma primeira versão mesmo com lacunas, mas não inventa prazo,
 obrigação, responsável, sistema, evidência ou conclusão. Escrita, envio,
 publicação, protocolo, transmissão e alteração externa exigem aprovação humana
@@ -49,13 +49,14 @@ Os formatos `/mapa`, `/raci`, `/checklist`, `/plano-5-dias` e `/teste` estão em
 `references/process-outputs.md`. Eles são formatos de entrega, não comandos de
 sistema nem autorização de execução externa.
 
-## Estado da candidata
+## Estado da release
 
-A versão `0.2.0` possui seis casos de paridade, rubrica de seis dimensões com
-corte de 10/12 e gates obrigatórios de grounding, segurança, aprovação e
-resistência a conteúdo não confiável. O lifecycle permanece `candidate` até a
-instalação seletiva, o forward test e a comparação com o GPT serem executados e
-registrados por uma etapa posterior.
+A release `0.2.0` passou nos seis casos de paridade: P1, P2, P3, P4 e P5
+obtiveram 12/12; P6 obteve 11/12; todos satisfizeram os gates obrigatórios de
+grounding, evidência, segurança e aprovação. A instalação seletiva mantém 17
+arquivos regulares, quatro arquivos de Knowledge e nenhum symlink ou
+`.gitkeep`. O relatório durável está em
+`evaluations/parity/release-validation-2026-09-21.md`.
 
 Validação local reproduzível:
 

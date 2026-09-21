@@ -17,7 +17,7 @@ A resposta correta não escolhe responsável ou prazo. Ela organiza as entradas,
 etapas, dependências, evidências, riscos e handoff disponíveis e transforma os
 dois campos ausentes em decisões explícitas.
 
-## Instalação seletiva da candidata
+## Instalação seletiva da release validada
 
 O checkout inteiro não é uma pasta de skill. A allowlist normativa está em
 `agent.yaml`, na ordem de `skill_runtime.package`. Copie arquivos reais, sem
@@ -36,9 +36,12 @@ Não copie `.git`, `.github`, `.superpowers`, `evaluations/`, `governance/`,
 `knowledge/MANIFEST.md`. Não crie outra pasta com cópias do Knowledge dentro do
 repositório: a distribuição parte diretamente dos quatro originais preservados.
 
-A versão ainda é `candidate`. A instalação e os testes comportamentais serão
-uma etapa posterior; não distribua como `validated` antes de registrar a
-comparação dos seis casos com o GPT canônico.
+A release `0.2.0` tem lifecycle `validated`: passou em 6/6 casos, totalizou
+71/72 pontos na rubrica consolidada e foi instalada com igualdade byte a byte
+nos 17 caminhos da allowlist. Instale a partir de `main` em um commit que
+contenha esta release ou de uma tag `v0.2.0` que resolva para o mesmo conteúdo;
+não use branches transitórias como origem operacional. A evidência e os limites
+estão em `evaluations/parity/release-validation-2026-09-21.md`.
 
 ## Escolha da saída
 

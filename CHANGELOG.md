@@ -2,9 +2,9 @@
 
 Todas as mudanças relevantes deste agente serão registradas aqui.
 
-## Unreleased
+## 0.2.0 — 2026-09-21
 
-- Empacota `$ac-processos-escritorio` `0.2.0` como candidata independente,
+- Publica `$ac-processos-escritorio` `0.2.0` como skill validada independente,
   ligada ao GPT canônico e reutilizada pelo alias publicado `copy`.
 - Declara allowlist distribuível, interface, políticas de fonte/aprovação,
   proteção contra prompt injection e cinco formatos de saída revisável.
@@ -21,6 +21,10 @@ Todas as mudanças relevantes deste agente serão registradas aqui.
   quatro downloads de 2026-08-07 como baseline documental reversível.
 - Resolve os dois registros relacionados do catálogo sem criar repo ou skill
   duplicada: o rascunho é a fonte canônica e a variante publicada é `copy`.
+- Registra PASS consolidado em 6/6 casos e 71/72 pontos: P1 a P5 com 12/12 e
+  P6 com 11/12, todos com os gates obrigatórios aprovados.
+- Instala seletivamente 17 arquivos, incluindo quatro arquivos de Knowledge,
+  sem symlinks ou `.gitkeep`, com igualdade byte a byte contra a origem.
 - Adiciona manual operacional, referência completa da estrutura e guia de contribuição expandido.
 - Torna os documentos operacionais obrigatórios na validação.
 
