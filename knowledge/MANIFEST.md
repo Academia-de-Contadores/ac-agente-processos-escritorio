@@ -1,10 +1,21 @@
 # Manifesto do Knowledge original do GPT
 
-> **Estado ao vivo em 2026-08-22:** o editor oficial
-> `g-6a6ea5f0985c8191971aa805e5ad759f` exibiu zero anexos em
-> `Conhecimento`. Os quatro arquivos abaixo são uma cópia histórica verificada
-> do rascunho de 2026-08-07 e não devem ser descritos como anexos atualmente
-> ativos no GPT publicado.
+## Estado online reconfirmado em 2026-09-21
+
+- O editor canônico `g-6a725900102c8191bdcb028b9ab4f21a` exibe os mesmos
+  quatro nomes preservados abaixo.
+- A tentativa de download atual gerou um descritor, mas não produziu binário
+  acessível para novo hash. Quantidade e nomes estão confirmados; bytes e
+  hashes online atuais permanecem `GAP`.
+- A última captura binária preservada neste repositório é de 2026-08-07. Seus
+  bytes e hashes locais foram reconfirmados em 2026-09-21.
+- O estado de zero anexos registrado em 2026-08-22 correspondia ao GPT público
+  distinto `g-6a6ea5f0985c8191971aa805e5ad759f`, uma variante `copy`,
+  e não ao editor canônico.
+- Consulte
+  [a auditoria corrente](../evaluations/live-editor-audit-2026-09-21.md).
+
+## Captura binária preservada — 2026-08-07
 
 - **GPT:** `ac.processos-escritorio`
 - **Editor:** https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a
@@ -20,3 +31,9 @@
 | `original/02-PADROES-DEPARTAMENTAIS-E-RISCOS.md` | `f1dca8545e265739dfdb3be626221578eeb16c076657292d7cc3dca6b649c001` | 4533 |
 
 Os arquivos foram copiados byte a byte com o mesmo nome exibido no GPT. Os hashes acima são a referência canônica para restauração e auditoria.
+
+Os documentos se identificam como pack interno
+`ss_ea_process_agent_v2` e não informam URL ou publicação externa que permita
+comprovar um original primário anterior. A origem comprovada neste repositório
+é o download direto do GPT em 2026-08-07; autoria anterior permanece não
+verificada.

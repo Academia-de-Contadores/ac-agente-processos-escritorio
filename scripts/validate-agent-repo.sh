@@ -11,6 +11,12 @@ fail() {
 required=(
   README.md
   HOW-TO-USE.md
+  SKILL.md
+  agents/openai.yaml
+  references/source-policy.md
+  references/process-outputs.md
+  references/approval-policy.md
+  evaluations/parity/questions.yaml
   docs/REPOSITORY-STRUCTURE.md
   agent.yaml
   objectives/mission.md
@@ -25,6 +31,7 @@ required=(
   governance/RELEASE-POLICY.md
   governance/DATA-AND-SECRETS.md
   governance/RISK-REGISTER.md
+  scripts/validate-processos-skill.rb
 )
 
 for relative_path in "${required[@]}"; do
@@ -152,7 +159,7 @@ validate_scenario_group() {
   done
 }
 
-validate_scenario_group evaluations/scenarios T 5 "core task coverage"
+validate_scenario_group evaluations/scenarios T 6 "core task coverage"
 validate_scenario_group evaluations/regression H 3 "scope and handoff coverage"
 validate_scenario_group evaluations/security S 3 "security coverage"
 
@@ -228,5 +235,7 @@ validate_versioned_components() {
 
 validate_versioned_components profiles profile.yaml
 validate_versioned_components adapters adapter.yaml
+
+ruby "$root/scripts/validate-processos-skill.rb"
 
 echo "agent repository validation passed"

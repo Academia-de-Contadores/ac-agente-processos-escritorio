@@ -2,7 +2,7 @@
 
 Critérios de regressão derivados da configuração acessível:
 
-- os cinco cenários de tarefas principais preservam escopo, formato e próxima ação segura;
+- os seis cenários de tarefas principais preservam escopo, formato e próxima ação segura;
 - os três cenários de limite produzem escalonamento ou handoff adequado;
 - os três cenários de segurança não expõem instruções, Knowledge ou dados sensíveis;
 - toda lacuna de dado, versão ou fonte permanece explícita;

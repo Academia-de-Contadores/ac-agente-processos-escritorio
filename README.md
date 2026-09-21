@@ -3,52 +3,75 @@
 | Campo | Valor |
 | --- | --- |
 | ID | `ac.processos-escritorio` |
-| Versão | `0.1.0` |
-| Lifecycle | `source-capture` |
+| Skill | `$ac-processos-escritorio` |
+| GPT canônico | [`g-6a725900102c8191bdcb028b9ab4f21a`](https://chatgpt.com/gpts/editor/g-6a725900102c8191bdcb028b9ab4f21a) |
+| Alias publicado | `g-6a6ea5f0985c8191971aa805e5ad759f` (`copy`) |
+| Versão | `0.2.0` |
+| Lifecycle | `validated` |
 
 ## Propósito
 
-Transforma um processo real informado pela usuária em uma primeira versão
-visível, testável e revisável. Organiza o processo descrito sem entregar uma
-biblioteca pronta nem substituir o Método CEO Contábil, a Mentoria ou os agentes
-departamentais especialistas. A IA organiza; a profissional decide; a evidência
-comprova.
+Transforma uma rotina real do escritório contábil em processo executável,
+visível, testável e revisável. A skill pode produzir mapa em uma página, RACI,
+checklist, plano de cinco dias e roteiro de teste, sempre separando fatos,
+lacunas, hipóteses e decisões humanas.
 
-Este repositório é a fonte de verdade do agente existente. Profiles e adapters
-apenas recortam ou traduzem seu núcleo canônico; não redefinem o comportamento.
+O GPT online é a baseline comportamental preservada. A skill validada é mais
+acionável: entrega uma primeira versão mesmo com lacunas, mas não inventa prazo,
+obrigação, responsável, sistema, evidência ou conclusão. Escrita, envio,
+publicação, protocolo, transmissão e alteração externa exigem aprovação humana
+explícita no momento da ação.
 
-## Usar e manter este agente
+Este repositório representa uma única família. O GPT publicado marcado como
+`copy` reutiliza o mesmo repositório e a mesma skill; não recebe duplicata.
 
-1. Leia `objectives/`, `identity/` e `instructions/` antes de operar ou alterar o
-   agente; esses diretórios definem missão, papel, comportamento e limites.
-2. Para reconstruir ou adaptar esta versão, siga `HOW-TO-USE.md` e use
-   `agent.yaml` como índice dos componentes canônicos.
-3. Registre novas capacidades em `skills/`, fontes curadas em `knowledge/` e
-   contratos externos em `connectors/`; nunca registre credenciais.
-4. Adicione avaliações para cada mudança comportamental e execute:
+## Pacote distribuível
 
-   ```bash
-   bash tests/validate-agent-repo.test.sh
-   bash scripts/validate-agent-repo.sh
-   ```
+O entrypoint é `SKILL.md`; a interface está em `agents/openai.yaml` e as regras
+condicionais em `references/`. A allowlist completa e ordenada está em
+`agent.yaml` sob `skill_runtime.package`.
 
-5. Siga o processo de contribuição antes de abrir um pull request.
+O runtime usa exatamente os quatro arquivos já preservados em
+`knowledge/original/`, capturados por download direto em 2026-08-07. Nenhum foi
+duplicado. `knowledge/MANIFEST.md` e o validador registram e verificam o SHA-256
+e o tamanho de cada um. Os nomes continuam visíveis no GPT em 2026-09-21, mas a
+paridade binária com o estado online atual permanece um `GAP` documentado.
 
-## Guias do repositório
+## Uso
 
-- [Como usar e reconstruir o agente](HOW-TO-USE.md)
-- [Estrutura e destino de cada arquivo](docs/REPOSITORY-STRUCTURE.md)
-- [Como contribuir](governance/CONTRIBUTING.md)
-- [Política de dados e segredos](governance/DATA-AND-SECRETS.md)
-- [Política de mudanças](governance/CHANGE-POLICY.md)
+Depois de uma instalação seletiva do pacote, invoque por exemplo:
 
-## Proteções versionadas e verificáveis
+```text
+Use $ac-processos-escritorio para transformar o recebimento mensal de documentos em mapa, RACI e checklist. Marque tudo que ainda depende de decisão humana.
+```
 
-O `.gitignore` reduz o risco de adicionar artefatos locais conhecidos, e
-`scripts/validate-agent-repo.sh` rejeita arquivos proibidos, artefatos RAG locais
-e arquivos maiores que 5 MB. O workflow `validate` executa esse validador em
-pull requests e pushes para `main`. O `CODEOWNERS` solicita revisão para áreas
-sensíveis. Workflow e `CODEOWNERS`, isoladamente, não provam bloqueio de merge;
-branch protection, rulesets, visibilidade e demais controles devem ser
-confirmados na configuração remota. Consulte `reports/task-3-report.md` para a
-evidência local e seus limites.
+Os formatos `/mapa`, `/raci`, `/checklist`, `/plano-5-dias` e `/teste` estão em
+`references/process-outputs.md`. Eles são formatos de entrega, não comandos de
+sistema nem autorização de execução externa.
+
+## Estado da release
+
+A release `0.2.0` passou nos seis casos de paridade: P1, P2, P3, P4 e P5
+obtiveram 12/12; P6 obteve 11/12; todos satisfizeram os gates obrigatórios de
+grounding, evidência, segurança e aprovação. A instalação seletiva mantém 17
+arquivos regulares, quatro arquivos de Knowledge e nenhum symlink ou
+`.gitkeep`. O relatório durável está em
+`evaluations/parity/release-validation-2026-09-21.md`.
+
+Validação local reproduzível:
+
+```bash
+bash tests/validate-agent-repo.test.sh
+bash scripts/validate-agent-repo.sh
+```
+
+O CI executa a suíte e o validador em pull requests e pushes para `main`. A
+skill não declara Action, MCP ou conector.
+
+## Guias
+
+- [Uso e instalação seletiva](HOW-TO-USE.md)
+- [Estrutura do repositório](docs/REPOSITORY-STRUCTURE.md)
+- [Captura e lacunas da fonte](evaluations/source-capture.md)
+- [Contribuição](governance/CONTRIBUTING.md)
+- [Dados e segredos](governance/DATA-AND-SECRETS.md)
